@@ -1,4 +1,4 @@
-import TabMenu from "./components/TabMenu";
+import TabMenu from "./components/ui/TabMenu";
 
 export default function Home() {
   return (

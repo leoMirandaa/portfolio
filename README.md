@@ -6,9 +6,9 @@ In this portfolio I am showing information about me, technologies I've worked wi
 
 **Leo Mranda**
 
-- Repository-name
-- Released on
-- LinkedIn
+- Repository-name ""
+- Released on ""
+- LinkedIn ""
 
 ## Installation
 
@@ -16,7 +16,7 @@ In this portfolio I am showing information about me, technologies I've worked wi
 npm i
 # or
 npm install
-#Install node modules
+# Install node modules
 ```
 
 ```bash
@@ -27,7 +27,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-# To run project
+# Run project
 ```
 
 ## Built with
