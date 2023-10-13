@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
+    "@tabler/icons-react": "^2.39.0",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
     "react": "^18",
