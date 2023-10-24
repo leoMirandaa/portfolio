@@ -5,11 +5,10 @@ export const PrimeReactSVG = () => {
     <Tooltip content="PrimeReact">
       <svg
         className="mx-1"
-        width="35"
-        height="41"
         viewBox="0 0 37 41"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        width={30}
+        fill="none"
       >
         <g clip-path="url(#clip0_235_1255)">
           <path
