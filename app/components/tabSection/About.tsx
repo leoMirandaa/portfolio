@@ -11,7 +11,7 @@ import {
   educationList,
   employmentList,
   techonologyIconList,
-  aboutSection,
+  whoAmIData,
 } from "@/app/utils";
 import React from "react";
 
@@ -28,7 +28,7 @@ const IconComponent = React.forwardRef<HTMLDivElement, { icon: ReactElement }>(
   }
 );
 export const About = () => {
-  const { fullName, profession, whoAmI, email, linkedIn } = aboutSection;
+  const { fullName, profession, whoAmI, email, linkedIn } = whoAmIData;
 
   useEffect(() => {
     aboutAnimation.whoAmIAnimation();
@@ -120,10 +120,10 @@ export const About = () => {
       </Card>
 
       <Card className="col-span-full lg:row-start-4 lg:col-span-3 opacity-0 educationContent">
-        <CardBody className="gap-4">
+        <CardBody className="gap-4 flex-wrap">
           <h2 className="text-3xl font-bold lg:hidden">Education</h2>
 
-          <div className="flex flex-col gap-4 lg:flex-row lg:justify-evenly lg:items-center ">
+          <div className="flex flex-col gap-4 lg:flex-row lg:justify-evenly lg:items-center">
             {educationList.map((education: educationType) => (
               <Education
                 key={education.career}
