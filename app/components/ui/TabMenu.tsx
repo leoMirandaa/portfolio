@@ -5,10 +5,7 @@ import { About } from "../tabSection";
 export default function TabMenu() {
   return (
     <>
-      <Tabs
-        className="flex justify-center my-4"
-        variant="bordered"
-      >
+      <Tabs className="flex justify-center my-4">
         <Tab
           key="about"
           title="About"
