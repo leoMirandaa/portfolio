@@ -4,7 +4,7 @@ export const LinkedInSVG = () => {
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      width={50}
+      width={60}
       fill="#ffffff"
     >
       <title>LinkedIn</title>

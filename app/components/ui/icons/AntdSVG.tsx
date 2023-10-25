@@ -2,11 +2,10 @@ export const AntdSVG = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
       viewBox="0 0 200 200"
       version="1.1"
       fill="#ffffff"
+      width={30}
     >
       <title>Group 28 Copy 5</title>
       <desc>Created with Sketch.</desc>
@@ -19,11 +18,11 @@ export const AntdSVG = () => {
           id="linearGradient-1"
         >
           <stop
-            stop-color="#4285EB"
+            stopColor="#4285EB"
             offset="0%"
           ></stop>
           <stop
-            stop-color="#2EC7FF"
+            stopColor="#2EC7FF"
             offset="100%"
           ></stop>
         </linearGradient>
@@ -35,15 +34,15 @@ export const AntdSVG = () => {
           id="linearGradient-2"
         >
           <stop
-            stop-color="#29CDFF"
+            stopColor="#29CDFF"
             offset="0%"
           ></stop>
           <stop
-            stop-color="#148EFF"
+            stopColor="#148EFF"
             offset="37.8600687%"
           ></stop>
           <stop
-            stop-color="#0A60FF"
+            stopColor="#0A60FF"
             offset="100%"
           ></stop>
         </linearGradient>
@@ -55,15 +54,15 @@ export const AntdSVG = () => {
           id="linearGradient-3"
         >
           <stop
-            stop-color="#FA816E"
+            stopColor="#FA816E"
             offset="0%"
           ></stop>
           <stop
-            stop-color="#F74A5C"
+            stopColor="#F74A5C"
             offset="41.472606%"
           ></stop>
           <stop
-            stop-color="#F51D2C"
+            stopColor="#F51D2C"
             offset="100%"
           ></stop>
         </linearGradient>
@@ -75,15 +74,15 @@ export const AntdSVG = () => {
           id="linearGradient-4"
         >
           <stop
-            stop-color="#FA8E7D"
+            stopColor="#FA8E7D"
             offset="0%"
           ></stop>
           <stop
-            stop-color="#F74A5C"
+            stopColor="#F74A5C"
             offset="51.2635191%"
           ></stop>
           <stop
-            stop-color="#F51D2C"
+            stopColor="#F51D2C"
             offset="100%"
           ></stop>
         </linearGradient>
@@ -91,9 +90,9 @@ export const AntdSVG = () => {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="logo"
@@ -106,7 +105,7 @@ export const AntdSVG = () => {
             <g id="Group-27-Copy-3">
               <g
                 id="Group-25"
-                fill-rule="nonzero"
+                fillRule="nonzero"
               >
                 <g id="2">
                   <path
