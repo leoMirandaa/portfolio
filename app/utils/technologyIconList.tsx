@@ -1,106 +1,60 @@
+import { IconType } from "../types";
 import {
-  IconBrandCss3,
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandReactNative,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconBrandVue,
-} from "@tabler/icons-react";
-
-import {
+  JavascriptSVG,
+  TypescriptSVG,
+  VueSVG,
+  TailwindSVG,
+  ReactSVG,
+  NextSVG,
+  NuxtSVG,
   ExpressSVG,
   NextUISVG,
   PrimeReactSVG,
   PrimeVueSVG,
   QuasarSVG,
+  HtmlSVG,
+  CssSVG,
+  MongoDBSVG,
+  AntdSVG,
 } from "../components/ui/icons";
-import { IconType } from "../types";
 
 export const techonologyIconList: IconType[] = [
   {
     name: "Html",
-    icon: (
-      <IconBrandHtml5
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <HtmlSVG />,
   },
   {
     name: "CSS",
-    icon: (
-      <IconBrandCss3
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <CssSVG />,
   },
   {
     name: "Javascript",
-    icon: (
-      <IconBrandJavascript
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <JavascriptSVG />,
   },
-
   {
     name: "Typescript",
-    icon: (
-      <IconBrandTypescript
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <TypescriptSVG />,
   },
   {
     name: "Vue",
-    icon: (
-      <IconBrandVue
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <VueSVG />,
+  },
+  {
+    name: "Nuxt",
+    icon: <NuxtSVG />,
   },
   {
     name: "Tailwind",
-    icon: (
-      <IconBrandTailwind
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <TailwindSVG />,
   },
   {
     name: "React",
-    icon: (
-      <IconBrandReact
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <ReactSVG />,
   },
-  {
-    name: "React native",
-    icon: (
-      <IconBrandReactNative
-        stroke={1}
-        size={40}
-      />
-    ),
-  },
+
   {
     name: "Next",
-    icon: (
-      <IconBrandNextjs
-        stroke={1}
-        size={40}
-      />
-    ),
+    icon: <NextSVG />,
   },
   {
     name: "Quasar",
@@ -121,5 +75,13 @@ export const techonologyIconList: IconType[] = [
   {
     name: "Express",
     icon: <ExpressSVG />,
+  },
+  {
+    name: "MongoDB",
+    icon: <MongoDBSVG />,
+  },
+  {
+    name: "Antd",
+    icon: <AntdSVG />,
   },
 ];
