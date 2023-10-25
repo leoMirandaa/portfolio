@@ -1,6 +1,6 @@
-import { aboutSectionType } from "../types/aboutSection";
+import { whoAmIDataType } from "../types/whoAmIData";
 
-export const aboutSection: aboutSectionType = {
+export const whoAmIData: whoAmIDataType = {
   fullName: "Leo Miranda",
   profession: "Front-end developer",
   whoAmI:
