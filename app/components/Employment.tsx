@@ -14,13 +14,13 @@ export const Employment = ({
       <span className="text-sm font-bold text-gray-400 ml-2 text-blue">
         ({years})
       </span>
-      <h4 className="text-xl text-gray-400">{position}</h4>
+      <h4 className="text-lg">{position}</h4>
 
-      <p className="text-lg">{description}</p>
+      <p className="text-lg text-gray-400">{description}</p>
 
       <div className="my-2 flex gap-2 flex-wrap">
         {technologies.map((technology: string) => (
-          <Chip>{technology}</Chip>
+          <Chip key={`technology-name-${technology}`}>{technology}</Chip>
         ))}
       </div>
     </div>
