@@ -2,11 +2,9 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { AboutV1, About } from "../tabSection";
 
-
 export default function TabMenu() {
   return (
     <>
-      {/* <Tabs className="flex justify-center my-4"> */}
       <Tabs className="flex justify-center mt-4 mb-8">
         <Tab
           key="about"
@@ -19,7 +17,7 @@ export default function TabMenu() {
           key="projects"
           title="Projects"
         >
-          <Projects />
+          <h2>Test projects</h2>
         </Tab>
 
         <Tab
