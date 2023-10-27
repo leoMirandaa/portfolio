@@ -2,7 +2,7 @@ export const PrimeVueSVG = () => {
   return (
     <svg
       height="34.285714285714285"
-      viewBox="0 0 35 40"
+      viewBox="0 0 37 41"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={30}
