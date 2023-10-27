@@ -1,5 +1,3 @@
-export * from "./HtmlSVG";
-export * from "./CssSVG";
 export * from "./JavascriptSVG";
 export * from "./TypescriptSVG";
 export * from "./VueSVG";
@@ -12,8 +10,9 @@ export * from "./PrimeVueSVG";
 export * from "./PrimeReactSVG";
 export * from "./NextUISVG";
 export * from "./ExpressSVG";
-export * from "./MongoDBSVG";
 export * from "./AntdSVG";
+export * from "./MongoDBSVG";
+export * from "./FirebaseSVG";
 export * from "./GithubSVG";
 export * from "./MailSVG";
 export * from "./LinkedInSVG";

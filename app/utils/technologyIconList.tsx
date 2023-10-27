@@ -12,21 +12,12 @@ import {
   PrimeReactSVG,
   PrimeVueSVG,
   QuasarSVG,
-  HtmlSVG,
-  CssSVG,
   MongoDBSVG,
   AntdSVG,
+  FirebaseSVG,
 } from "../components/ui/icons";
 
 export const techonologyIconList: IconType[] = [
-  {
-    name: "Html",
-    icon: <HtmlSVG />,
-  },
-  {
-    name: "CSS",
-    icon: <CssSVG />,
-  },
   {
     name: "Javascript",
     icon: <JavascriptSVG />,
@@ -43,10 +34,7 @@ export const techonologyIconList: IconType[] = [
     name: "Nuxt",
     icon: <NuxtSVG />,
   },
-  {
-    name: "Tailwind",
-    icon: <TailwindSVG />,
-  },
+
   {
     name: "React",
     icon: <ReactSVG />,
@@ -55,6 +43,10 @@ export const techonologyIconList: IconType[] = [
   {
     name: "Next",
     icon: <NextSVG />,
+  },
+  {
+    name: "Tailwind",
+    icon: <TailwindSVG />,
   },
   {
     name: "Quasar",
@@ -69,6 +61,10 @@ export const techonologyIconList: IconType[] = [
     icon: <PrimeReactSVG />,
   },
   {
+    name: "Antd",
+    icon: <AntdSVG />,
+  },
+  {
     name: "NextUI",
     icon: <NextUISVG />,
   },
@@ -76,12 +72,13 @@ export const techonologyIconList: IconType[] = [
     name: "Express",
     icon: <ExpressSVG />,
   },
+
   {
     name: "MongoDB",
     icon: <MongoDBSVG />,
   },
   {
-    name: "Antd",
-    icon: <AntdSVG />,
+    name: "Firebase",
+    icon: <FirebaseSVG />,
   },
 ];
