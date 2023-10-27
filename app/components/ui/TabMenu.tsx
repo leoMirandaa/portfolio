@@ -2,6 +2,7 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { AboutV1, About } from "../tabSection";
 
+
 export default function TabMenu() {
   return (
     <>
@@ -13,12 +14,14 @@ export default function TabMenu() {
         >
           <About />
         </Tab>
+
         <Tab
           key="projects"
           title="Projects"
         >
-          <main>test2</main>
+          <Projects />
         </Tab>
+
         <Tab
           key="contact"
           title="Contact"
