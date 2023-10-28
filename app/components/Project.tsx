@@ -3,6 +3,7 @@ import { Card, CardBody, Chip, Link } from "@nextui-org/react";
 import { projectType } from "../types";
 import { GithubSVG, LinkSVG } from "./ui/icons";
 import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
+import Image from "next/image";
 
 export const Project = (project: projectType) => {
   const {
@@ -45,10 +46,13 @@ export const Project = (project: projectType) => {
       {/* main image */}
       <Card className="col-span-full lg:row-start-2 lg:row-end-4 lg:col-start-2 lg:col-end-4 ">
         <CardBody className="gap-4">
-          <img
-            src={img1}
-            alt={`${title} image`}
-          />
+          <div style={{ width: "100%", height: "300px", position: "relative" }}>
+            <Image
+              src={img1}
+              alt={`${title} image`}
+              fill
+            />
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-2">
             {technologies.map((technology) => (
               <Chip>{technology}</Chip>
@@ -82,12 +86,13 @@ export const Project = (project: projectType) => {
       {/* img2 */}
       <Card className="hidden lg:block col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-2 opacity-0 img2Card">
         <CardBody className="gap-4 flex justify-center items-center">
-          <img
-            className="h-96 object-contain"
-            // height="80%"
-            src={img2}
-            alt={`${subtitle} image`}
-          />
+          <div style={{ width: "100%", height: "300px", position: "relative" }}>
+            <Image
+              src={img2}
+              alt={`${subtitle} image`}
+              fill
+            />
+          </div>
         </CardBody>
       </Card>
 
