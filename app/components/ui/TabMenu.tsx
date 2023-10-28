@@ -1,6 +1,6 @@
 "use client";
 import { Tabs, Tab } from "@nextui-org/react";
-import { AboutV1, About, Contact } from "../tabSection";
+import { AboutV1, About, Contact, Projects } from "../tabSection";
 
 export default function TabMenu() {
   return (
@@ -17,7 +17,7 @@ export default function TabMenu() {
           key="projects"
           title="Projects"
         >
-          <h2>Test projects</h2>
+          <Projects />
         </Tab>
 
         <Tab
