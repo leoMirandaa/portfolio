@@ -27,14 +27,15 @@ const IconComponent = React.forwardRef<HTMLDivElement, { icon: any }>(
     );
   }
 );
-export const About = () => {
+export const Home = () => {
   const { fullName, profession, whoAmI, quote } = whoAmIData;
 
   useEffect(() => {
     aboutAnimation.whoAmIAnimation();
-    aboutAnimation.contactAnimation();
-    aboutAnimation.technologiesTitleAnimation();
+    aboutAnimation.professionAnimation();
+    aboutAnimation.quoteAnimation();
     aboutAnimation.techonologyIconListAnimation();
+    aboutAnimation.verticalImageAnimation();
     aboutAnimation.educationContentAnimation();
   }, []);
 
@@ -56,16 +57,10 @@ export const About = () => {
         <CardBody className="gap-2">
           <h2 className="text-3xl font-bold">Who am I?</h2>
           <p className="text-lg text-gray-400">{whoAmI} </p>
-          <p className="text-lg text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            sequi expedita quis, eum voluptates nihil quae iste culpa placeat
-            soluta eaque mollitia! Odit corrupti exercitationem, nam perferendis
-            accusamus animi explicabo.
-          </p>
         </CardBody>
       </Card>
 
-      <Card className="col-span-full row-start-2 row-end-3 lg:row-start-2 lg:col-start-1 lg:col-span-1 opacity-0 contactCard bg-blue ">
+      <Card className="col-span-full row-start-2 row-end-3 lg:row-start-2 lg:col-start-1 lg:col-span-1 bg-blue opacity-0 professionCard">
         <CardBody className="justify-center items-center">
           <h2 className="text-2xl lg:text-3xl font-bold  text-center">
             {profession}
@@ -73,7 +68,7 @@ export const About = () => {
         </CardBody>
       </Card>
 
-      <Card className="hidden lg:block col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 opacity-0 contactCard bg-blue bg-blue ">
+      <Card className="hidden lg:block col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
           <div className="text-xl font-bold text-center">“{quote}"</div>
         </CardBody>
@@ -86,10 +81,9 @@ export const About = () => {
           <div className="flex flex-wrap justify-center lg:justify-start gap-6">
             {techonologyIconList.map(({ name, icon }: IconType) => (
               <Tooltip
-                key={name}
+                key={`technology-item-${name}`}
                 content={name}
               >
-                {/* {icon} */}
                 <IconComponent icon={icon} />
                 {/* <Chip variant="flat">{name}</Chip> */}
               </Tooltip>
@@ -98,8 +92,9 @@ export const About = () => {
         </CardBody>
       </Card>
 
+      {/* vertical img */}
       <img
-        className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 technologyIconList"
+        className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 verticalImage"
         src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
       />
@@ -134,7 +129,7 @@ export const About = () => {
           <div className="flex flex-col lg:flex-col gap-2">
             {educationList.map((education: educationType) => (
               <Education
-                key={education.career}
+                key={`education-item-${education.career}`}
                 career={education.career}
                 years={education.years}
                 description={education.description}

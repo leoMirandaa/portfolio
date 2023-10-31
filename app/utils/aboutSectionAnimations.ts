@@ -8,37 +8,37 @@ const whoAmIAnimation = () => {
       whoAmICard,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(-100px) ", "none"],
+        transform: ["translateX(-100px) ", "none"],
       },
       { duration: 0.5, delay: 0.1 }
     );
   });
 };
 
-const contactAnimation = () => {
-  const contactCard = document.querySelectorAll(".contactCard");
+const verticalImageAnimation = () => {
+  const verticalImage = document.querySelectorAll(".verticalImage");
 
-  inView(contactCard, () => {
+  inView(verticalImage, () => {
     animate(
-      contactCard,
+      verticalImage,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(100px) ", "none"],
+        transform: ["translateY(-100px) ", "none"],
       },
       { duration: 0.5, delay: 0.2 }
     );
   });
 };
 
-const technologiesTitleAnimation = () => {
-  const technologiesTitle = document.querySelectorAll(".technologiesTitle");
+const educationContentAnimation = () => {
+  const educationContent = document.querySelectorAll(".educationContent");
 
-  inView(technologiesTitle, () => {
+  inView(educationContent, () => {
     animate(
-      technologiesTitle,
+      educationContent,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateX(-100px) ", "none"],
+        transform: ["translateX(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.3 }
     );
@@ -53,22 +53,37 @@ const techonologyIconListAnimation = () => {
       technologyIconList,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateX(100px) ", "none"],
+        transform: ["translateY(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.4 }
     );
   });
 };
 
-const educationContentAnimation = () => {
-  const educationContent = document.querySelectorAll(".educationContent");
+const professionAnimation = () => {
+  const professionCard = document.querySelectorAll(".professionCard");
 
-  inView(educationContent, () => {
+  inView(professionCard, () => {
     animate(
-      educationContent,
+      professionCard,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(100px) ", "none"],
+        transform: ["translateX(-100px) ", "none"],
+      },
+      { duration: 0.5, delay: 0.5 }
+    );
+  });
+};
+
+const quoteAnimation = () => {
+  const quoteCard = document.querySelectorAll(".quoteCard");
+
+  inView(quoteCard, () => {
+    animate(
+      quoteCard,
+      {
+        opacity: [0, 0.2, 0.8, 1],
+        transform: ["translateX(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.5 }
     );
@@ -76,9 +91,10 @@ const educationContentAnimation = () => {
 };
 
 export default {
-  contactAnimation,
   whoAmIAnimation,
-  technologiesTitleAnimation,
+  professionAnimation,
+  quoteAnimation,
   techonologyIconListAnimation,
+  verticalImageAnimation,
   educationContentAnimation,
 };
