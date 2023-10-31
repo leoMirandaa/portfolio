@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Card, CardBody, Chip, Link } from "@nextui-org/react";
 import { projectType } from "../types";
-import { GithubSVG, LinkSVG } from "./ui/icons";
 import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
 import Image from "next/image";
+import { GithubSVG, LinkSVG } from "./ui/icons";
 
 export const Project = (project: projectType) => {
   const {
