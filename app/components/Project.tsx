@@ -51,6 +51,7 @@ export const Project = (project: projectType) => {
               src={img1}
               alt={`${title} image`}
               fill
+              sizes="100px"
             />
           </div>
           <div className="flex flex-wrap justify-center items-center gap-2">
@@ -91,6 +92,7 @@ export const Project = (project: projectType) => {
               src={img2}
               alt={`${subtitle} image`}
               fill
+              sizes="100px"
             />
           </div>
         </CardBody>

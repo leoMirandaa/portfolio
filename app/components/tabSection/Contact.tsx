@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Button, Card, CardBody } from "@nextui-org/react";
-import { GithubSVG, LinkedInSVG, MailSVG } from "../ui/icons";
 import { contactData } from "@/app/utils";
 import contactAnimation from "../../utils/contactSectionAnimations";
 import Link from "next/link";
+import { GithubSVG, LinkedInSVG, MailSVG } from "../ui/icons";
 
 export const Contact = () => {
   const { email, github, linkedIn } = contactData;
