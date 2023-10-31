@@ -1,19 +1,13 @@
 import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
-import {
-  GithubSVG,
-  MagentaKitchenSVG,
-  QuasarSVG,
-  ShopApiSVG,
-  Sk8terSVG,
-} from "../ui/icons";
 import { ProjectList } from "@/app/utils";
 import { projectType } from "@/app/types";
+import { Project } from "../Project";
 
 export const Projects = () => {
   return (
     <main>
       <Accordion defaultExpandedKeys={["1"]}>
-        {ProjectList.map((project: projectType, index) => (
+        {ProjectList.map((project: projectType) => (
           <AccordionItem
             key={project.key}
             aria-label={project.title}
@@ -27,7 +21,7 @@ export const Projects = () => {
               />
             }
           >
-            {project.description}
+            <Project {...project} />
           </AccordionItem>
         ))}
       </Accordion>
