@@ -10,13 +10,12 @@ import {
 } from "@nextui-org/react";
 
 import { Education } from "../Education";
-import { Employment } from "../Employment";
-import { EmploymentType, IconType, educationType } from "@/app/types";
+import { IconType, educationType } from "@/app/types";
 import aboutAnimation from "../../utils/aboutSectionAnimations";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import React from "react";
 
-const IconComponent = React.forwardRef<HTMLDivElement, { icon: ReactElement }>(
+const IconComponent = React.forwardRef<HTMLDivElement, { icon: any }>(
   (props, ref): any => {
     return (
       <p
@@ -36,10 +35,7 @@ export const About = () => {
     aboutAnimation.contactAnimation();
     aboutAnimation.technologiesTitleAnimation();
     aboutAnimation.techonologyIconListAnimation();
-    aboutAnimation.educationTitleAnimation();
     aboutAnimation.educationContentAnimation();
-    aboutAnimation.employmentTitleAnimation();
-    aboutAnimation.employmentContentAnimation();
   }, []);
 
   return (
@@ -69,36 +65,31 @@ export const About = () => {
         </CardBody>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-2 lg:col-start-1 lg:col-span-1 opacity-0 contactCard bg-blue ">
+      <Card className="col-span-full row-start-2 row-end-3 lg:row-start-2 lg:col-start-1 lg:col-span-1 opacity-0 contactCard bg-blue ">
         <CardBody className="justify-center items-center">
-          <h2 className="text-xl lg:text-3xl font-bold  text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold  text-center">
             {profession}
           </h2>
         </CardBody>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 opacity-0 contactCard bg-blue bg-blue ">
+      <Card className="hidden lg:block col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 opacity-0 contactCard bg-blue bg-blue ">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
           <div className="text-xl font-bold text-center">“{quote}"</div>
         </CardBody>
       </Card>
 
-      {/* <Card className="hidden lg:flex lg:row-start-3 lg:col-span-1 bg-blue opacity-0 technologiesTitle">
-        <CardBody>
-          <h2 className="text-3xl font-bold">Technologies I've worked with</h2>
-        </CardBody>
-      </Card> */}
-
       <Card className="col-span-full lg:row-start-3 lg:row-span-2 lg:col-start-1 lg:col-span-1 opacity-0 technologyIconList">
         <CardBody className="gap-4">
           <h2 className="text-3xl font-bold">Technologies I've worked with</h2>
 
-          <div className="flex flex-wrap justify-start gap-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-6">
             {techonologyIconList.map(({ name, icon }: IconType) => (
               <Tooltip
                 key={name}
                 content={name}
               >
+                {/* {icon} */}
                 <IconComponent icon={icon} />
                 {/* <Chip variant="flat">{name}</Chip> */}
               </Tooltip>
@@ -107,21 +98,11 @@ export const About = () => {
         </CardBody>
       </Card>
 
-      <Card className=" col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3  opacity-0 technologyIconList">
-        <CardBody className="justify-center ">
-          <img
-            className="h-96"
-            src="https://img.freepik.com/free-photo/close-up-hand-holding-device_23-2149241418.jpg?w=826&t=st=1698361798~exp=1698362398~hmac=6b4f02d2ce4a43a6242ebf9921dbeceab0de67968320a5ba68b1570e248ab4ff"
-            alt=""
-          />
-        </CardBody>
-      </Card>
-
-      {/* <Card className="hidden lg:flex lg:row-start-4 lg:col-span-1 bg-blue opacity-0 educationTitle">
-        <CardBody className="justify-center items-center">
-          <h2 className="text-3xl font-bold">Education</h2>
-        </CardBody>
-      </Card> */}
+      <img
+        className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 technologyIconList"
+        src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+      />
 
       <Card className="col-span-full lg:row-start-4 lg:row-span-1 lg:col-start-2 lg:col-span-2 opacity-0 educationContent">
         <svg
