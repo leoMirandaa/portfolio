@@ -3,82 +3,67 @@ import {
   JavascriptSVG,
   TypescriptSVG,
   VueSVG,
-  TailwindSVG,
   ReactSVG,
-  NextSVG,
-  NuxtSVG,
+  TailwindSVG,
   ExpressSVG,
   NextUISVG,
   PrimeReactSVG,
   PrimeVueSVG,
   QuasarSVG,
   MongoDBSVG,
-  AntdSVG,
   FirebaseSVG,
 } from "../components/ui/icons";
 
+let color = "#9ca3af";
 export const techonologyIconList: IconType[] = [
   {
     name: "Javascript",
-    icon: <JavascriptSVG />,
+    icon: <JavascriptSVG color={color} />,
   },
   {
     name: "Typescript",
-    icon: <TypescriptSVG />,
+    icon: <TypescriptSVG color={color} />,
   },
   {
     name: "Vue",
-    icon: <VueSVG />,
+    icon: <VueSVG color={color} />,
   },
-  {
-    name: "Nuxt",
-    icon: <NuxtSVG />,
-  },
-
   {
     name: "React",
-    icon: <ReactSVG />,
+    icon: <ReactSVG color={color} />,
   },
 
   {
-    name: "Next",
-    icon: <NextSVG />,
+    name: "Quasar",
+    icon: <QuasarSVG color={color} />,
   },
   {
     name: "Tailwind",
-    icon: <TailwindSVG />,
-  },
-  {
-    name: "Quasar",
-    icon: <QuasarSVG />,
+    icon: <TailwindSVG color={color} />,
   },
   {
     name: "PrimeVue",
-    icon: <PrimeVueSVG />,
+    icon: <PrimeVueSVG color={color} />,
   },
   {
     name: "PrimeReact",
-    icon: <PrimeReactSVG />,
-  },
-  {
-    name: "Antd",
-    icon: <AntdSVG />,
-  },
-  {
-    name: "NextUI",
-    icon: <NextUISVG />,
-  },
-  {
-    name: "Express",
-    icon: <ExpressSVG />,
+    icon: <PrimeReactSVG color={color} />,
   },
 
   {
+    name: "NextUI",
+    icon: <NextUISVG color={color} />,
+  },
+  {
+    name: "Express",
+    icon: <ExpressSVG color={color} />,
+  },
+  {
     name: "MongoDB",
-    icon: <MongoDBSVG />,
+    icon: <MongoDBSVG color={color} />,
   },
   {
     name: "Firebase",
-    icon: <FirebaseSVG />,
+    icon: <FirebaseSVG color={color} />,
   },
 ];

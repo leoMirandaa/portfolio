@@ -8,7 +8,7 @@ const whoAmIAnimation = () => {
       whoAmICard,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(100px) ", "none"],
+        transform: ["translateY(-100px) ", "none"],
       },
       { duration: 0.5, delay: 0.1 }
     );
@@ -23,7 +23,7 @@ const contactAnimation = () => {
       contactCard,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(-100px) ", "none"],
+        transform: ["translateY(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.2 }
     );
@@ -60,22 +60,6 @@ const techonologyIconListAnimation = () => {
   });
 };
 
-const educationTitleAnimation = () => {
-  const educationTitle = document.querySelectorAll(".educationTitle");
-
-  inView(educationTitle, () => {
-    animate(
-      educationTitle,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-
-        transform: ["translateX(-100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.5 }
-    );
-  });
-};
-
 const educationContentAnimation = () => {
   const educationContent = document.querySelectorAll(".educationContent");
 
@@ -84,40 +68,9 @@ const educationContentAnimation = () => {
       educationContent,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateX(100px) ", "none"],
+        transform: ["translateY(100px) ", "none"],
       },
-      { duration: 0.5, delay: 0.6 }
-    );
-  });
-};
-
-const employmentTitleAnimation = () => {
-  const employmentTitle = document.querySelectorAll(".employmentTitle");
-
-  inView(employmentTitle, () => {
-    animate(
-      employmentTitle,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-
-        transform: ["translateX(-100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.7 }
-    );
-  });
-};
-
-const employmentContentAnimation = () => {
-  const employmentContent = document.querySelectorAll(".employmentContent");
-
-  inView(employmentContent, () => {
-    animate(
-      employmentContent,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateX(100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.8 }
+      { duration: 0.5, delay: 0.5 }
     );
   });
 };
@@ -127,8 +80,5 @@ export default {
   whoAmIAnimation,
   technologiesTitleAnimation,
   techonologyIconListAnimation,
-  educationTitleAnimation,
   educationContentAnimation,
-  employmentTitleAnimation,
-  employmentContentAnimation,
 };
