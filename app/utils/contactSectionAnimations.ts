@@ -38,9 +38,23 @@ const githubAnimation = () => {
       githubCard,
       {
         opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(100px) ", "none"],
+        transform: ["translateY(-100px) ", "none"],
       },
       { duration: 0.5, delay: 0.3 }
+    );
+  });
+};
+const formAnimation = () => {
+  const form = document.querySelectorAll(".form");
+
+  inView(form, () => {
+    animate(
+      form,
+      {
+        opacity: [0, 0.2, 0.8, 1],
+        transform: ["translateY(100px) ", "none"],
+      },
+      { duration: 0.5, delay: 0.5 }
     );
   });
 };
@@ -49,4 +63,5 @@ export default {
   emailAnimation,
   githubAnimation,
   linkedInAnimation,
+  formAnimation,
 };
