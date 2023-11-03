@@ -288,7 +288,7 @@ export const LinkSVG = () => {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      width={50}
+      width={60}
     >
       <path
         stroke="none"

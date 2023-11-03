@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Card, CardBody, Chip, Link } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
 import { projectType } from "../types";
 import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
 import Image from "next/image";
@@ -7,124 +7,93 @@ import { GithubSVG, LinkSVG } from "./ui/icons";
 
 export const Project = (project: projectType) => {
   const {
-    key,
     bgColor,
-    icon,
     description,
     title,
-    subtitle,
-    text1,
-    text2,
-    text3,
-    img1,
-    img2,
+    icon,
+    imgUrl,
+    videoUrl,
     technologies,
-    githubLink,
-    websiteLink,
+    githubUrl,
+    websiteUrl,
   } = project;
 
   useEffect(() => {
-    ProjectsSectionAnimations.img2Animation();
-    ProjectsSectionAnimations.text1Animation();
-    ProjectsSectionAnimations.text2Animation();
+    ProjectsSectionAnimations.videoAnimation();
     ProjectsSectionAnimations.descriptionAnimation();
-    ProjectsSectionAnimations.text3Animation();
-    ProjectsSectionAnimations.websiteLinkAnimation();
-    ProjectsSectionAnimations.githubLinkAnimation();
+    ProjectsSectionAnimations.websiteUrlAnimation();
+    ProjectsSectionAnimations.githubUrlAnimation();
   }, []);
 
   return (
     // <div className="grid grid-rows-8 grid-cols-4 lg:grid-cols-5 gap-4">
-    <div className="grid grid-rows-8 grid-cols-4 gap-4 pb-4 overflow-hidden">
-      <Card
-        className="row-start-1 col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-2 opacity-0 text1Card"
-        style={{ backgroundColor: bgColor }}
-      >
-        <CardBody className="text-center text-3xl font-bold">{text1}</CardBody>
-      </Card>
+    <div className="grid grid-rows-8 grid-cols-4 gap-6 pb-4 overflow-hidden">
+      <div className="col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white">
+        {title}
+      </div>
 
-      {/* main image */}
-      <Card className="col-span-full lg:row-start-2 lg:row-end-4 lg:col-start-2 lg:col-end-4 ">
-        <CardBody className="gap-4">
-          <div style={{ width: "100%", height: "300px", position: "relative" }}>
-            <Image
-              src={img1}
-              alt={`${title} image`}
-              fill
-              sizes="100px"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-2">
-            {technologies.map((technology) => (
-              <Chip>{technology}</Chip>
+      <div
+        // style={{ width: "100%", height: "100%", position: "relative" }}
+        className="col-span-full lg:row-start-2 lg:row-end-4 lg:col-start-1 lg:col-end-3 h-52 lg:h-auto videoSection"
+      >
+        <video
+          className="rounded-xl  border-1 border-[#212121]"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            // objectFit: "fill",
+          }}
+          autoPlay
+          loop
+          playsInline
+          poster={imgUrl}
+          src={videoUrl}
+        ></video>
+      </div>
+
+      <Card className="col-span-full lg:row-start-2 lg:row-end-3 lg:col-start-3 lg:col-end-5 opacity-0 descriptionCard">
+        <CardBody className="text-gray-400 text-lg flex justify-between gap-4">
+          {description}
+          <div className=" flex flex-wrap gap-2">
+            {technologies.map((technology: string) => (
+              <Chip
+                key={`technology-item-${technology}`}
+                // variant="flat"
+                size="sm"
+              >
+                {technology}
+              </Chip>
             ))}
           </div>
         </CardBody>
       </Card>
 
-      <Card className="col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-4 lg:col-end-6 opacity-0 descriptionCard">
-        <CardBody className="text-gray-400 text-lg">{description}</CardBody>
+      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:col-end-4 opacity-0 githubUrlCard">
+        <Link
+          href={websiteUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="min-h-full flex justify-center items-center"
+        >
+          <CardBody className="justify-center items-center">
+            <LinkSVG />
+          </CardBody>
+        </Link>
       </Card>
 
-      <Card
-        className="col-span-2 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-4 opacity-0 text2Card"
-        style={{ backgroundColor: bgColor }}
-      >
-        <CardBody className="text-center justify-center items-center text-3xl font-bold">
-          {text2}
-        </CardBody>
+      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:col-end-5 opacity-0 websiteUrlCard">
+        <Link
+          href={githubUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="min-h-full flex justify-center items-center"
+        >
+          <CardBody className="justify-center items-center">
+            <GithubSVG />
+          </CardBody>
+        </Link>
       </Card>
-
-      <Card
-        className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-2 opacity-0 text3Card"
-        style={{ backgroundColor: bgColor }}
-      >
-        <CardBody className="text-center justify-center items-center text-3xl font-bold">
-          {text3}
-        </CardBody>
-      </Card>
-
-      {/* img2 */}
-      <Card className="hidden lg:block col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-2 opacity-0 img2Card">
-        <CardBody className="gap-4 flex justify-center items-center">
-          <div style={{ width: "100%", height: "300px", position: "relative" }}>
-            <Image
-              src={img2}
-              alt={`${subtitle} image`}
-              fill
-              sizes="100px"
-            />
-          </div>
-        </CardBody>
-      </Card>
-
-      <div className="col-span-full flex gap-4 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:col-end-6 opacity-0 websiteLinkCard">
-        <Card className="col-span-2 lg:row-start-3 lg:row-end-4 w-1/2">
-          <Link
-            href={websiteLink}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="min-h-full flex justify-center items-center"
-          >
-            <CardBody className="justify-center items-center">
-              <LinkSVG />
-            </CardBody>
-          </Link>
-        </Card>
-
-        <Card className="col-span-2 lg:row-start-3 lg:row-end-4 w-1/2 opacity-0 githubLinkCard">
-          <Link
-            href={githubLink}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="min-h-full flex justify-center items-center"
-          >
-            <CardBody className="justify-center items-center">
-              <GithubSVG />
-            </CardBody>
-          </Link>
-        </Card>
-      </div>
     </div>
   );
 };
