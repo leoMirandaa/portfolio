@@ -1,46 +1,16 @@
 import { inView, animate } from "motion";
 
-const img2Animation = () => {
-  const img2Card = document.querySelectorAll(".img2Card");
+const videoAnimation = () => {
+  const video = document.querySelectorAll(".videoSection");
 
-  inView(img2Card, () => {
+  inView(video, () => {
     animate(
-      img2Card,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.1 }
-    );
-  });
-};
-
-const text1Animation = () => {
-  const text1Card = document.querySelectorAll(".text1Card");
-
-  inView(text1Card, () => {
-    animate(
-      text1Card,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-        transform: ["translateY(-100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.2 }
-    );
-  });
-};
-
-const text2Animation = () => {
-  const text2 = document.querySelectorAll(".text2Card");
-
-  inView(text2, () => {
-    animate(
-      text2,
+      video,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateX(-100px) ", "none"],
       },
-      { duration: 0.5, delay: 0.3 }
+      { duration: 0.5, delay: 0.2 }
     );
   });
 };
@@ -60,28 +30,27 @@ const descriptionAnimation = () => {
   });
 };
 
-const text3Animation = () => {
-  const text3 = document.querySelectorAll(".text3Card");
+const githubUrlAnimation = () => {
+  const githubLink = document.querySelectorAll(".githubUrlCard");
 
-  inView(text3, () => {
+  inView(githubLink, () => {
     animate(
-      text3,
+      githubLink,
       {
         opacity: [0, 0.2, 0.8, 1],
-
-        transform: ["translateX(-100px) ", "none"],
+        transform: ["translateX(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.5 }
     );
   });
 };
 
-const githubLinkAnimation = () => {
-  const githubLink = document.querySelectorAll(".githubLinkCard");
+const websiteUrlAnimation = () => {
+  const websiteLink = document.querySelectorAll(".websiteUrlCard");
 
-  inView(githubLink, () => {
+  inView(websiteLink, () => {
     animate(
-      githubLink,
+      websiteLink,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateX(100px) ", "none"],
@@ -91,28 +60,9 @@ const githubLinkAnimation = () => {
   });
 };
 
-const websiteLinkAnimation = () => {
-  const websiteLink = document.querySelectorAll(".websiteLinkCard");
-
-  inView(websiteLink, () => {
-    animate(
-      websiteLink,
-      {
-        opacity: [0, 0.2, 0.8, 1],
-
-        transform: ["translateX(-100px) ", "none"],
-      },
-      { duration: 0.5, delay: 0.7 }
-    );
-  });
-};
-
 export default {
-  img2Animation,
-  text1Animation,
-  text2Animation,
+  videoAnimation,
   descriptionAnimation,
-  text3Animation,
-  websiteLinkAnimation,
-  githubLinkAnimation,
+  websiteUrlAnimation,
+  githubUrlAnimation,
 };
