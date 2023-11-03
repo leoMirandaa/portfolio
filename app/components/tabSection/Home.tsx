@@ -8,6 +8,7 @@ import aboutAnimation from "../../utils/aboutSectionAnimations";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import Image from "next/image";
 
+// eslint-disable-next-line react/display-name
 const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
   (props, ref): any => {
     return (
@@ -20,6 +21,7 @@ const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
     );
   }
 );
+IconComponent.displayName = "IconComponent";
 export default IconComponent;
 
 export const Home = () => {
