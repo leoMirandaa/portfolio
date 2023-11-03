@@ -1,21 +1,14 @@
-import { ReactElement, useEffect } from "react";
+import { ReactElement, forwardRef, useEffect } from "react";
 
-import {
-  Avatar,
-  Button,
-  Card,
-  CardBody,
-  Chip,
-  Tooltip,
-} from "@nextui-org/react";
+import { Avatar, Button, Card, CardBody, Tooltip } from "@nextui-org/react";
 
 import { Education } from "../Education";
 import { IconType, educationType } from "@/app/types";
 import aboutAnimation from "../../utils/aboutSectionAnimations";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
-import React from "react";
+import Image from "next/image";
 
-const IconComponent = React.forwardRef<HTMLDivElement, { icon: any }>(
+const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
   (props, ref): any => {
     return (
       <p
@@ -27,6 +20,8 @@ const IconComponent = React.forwardRef<HTMLDivElement, { icon: any }>(
     );
   }
 );
+export default IconComponent;
+
 export const Home = () => {
   const { fullName, profession, whoAmI, quote } = whoAmIData;
 
@@ -70,13 +65,15 @@ export const Home = () => {
 
       <Card className="hidden lg:block col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
-          <div className="text-xl font-bold text-center">“{quote}"</div>
+          <div className="text-xl font-bold text-center">{quote}</div>
         </CardBody>
       </Card>
 
       <Card className="col-span-full lg:row-start-3 lg:row-span-2 lg:col-start-1 lg:col-span-1 opacity-0 technologyIconList">
         <CardBody className="gap-4">
-          <h2 className="text-3xl font-bold">Technologies I've worked with</h2>
+          <h2 className="text-3xl font-bold">
+            Technologies I have worked with
+          </h2>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-6">
             {techonologyIconList.map(({ name, icon }: IconType) => (
@@ -93,11 +90,22 @@ export const Home = () => {
       </Card>
 
       {/* vertical img */}
-      <img
-        className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 verticalImage"
-        src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
-      />
+      <div className="radius col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl relative opacity-0 verticalImage">
+        <Image
+          // className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 verticalImage"
+          src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="profile image"
+          fill
+          // sizes="100px"
+          style={{
+            width: "100%",
+            height: "100%",
+            // objectFit: "contain",
+            objectFit: "fill",
+            borderRadius: "15px",
+          }}
+        />
+      </div>
 
       <Card className="col-span-full lg:row-start-4 lg:row-span-1 lg:col-start-2 lg:col-span-2 opacity-0 educationContent">
         <svg
