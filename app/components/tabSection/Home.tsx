@@ -3,7 +3,7 @@ import { ReactElement, forwardRef, useEffect } from "react";
 import { Avatar, Button, Card, CardBody, Tooltip } from "@nextui-org/react";
 
 import { Education } from "../Education";
-import { IconType, educationType } from "@/app/types";
+import { iconType, educationType } from "@/app/types";
 import aboutAnimation from "../../utils/aboutSectionAnimations";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import Image from "next/image";
@@ -78,7 +78,7 @@ export const Home = () => {
           </h2>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-            {techonologyIconList.map(({ name, icon }: IconType) => (
+            {techonologyIconList.map(({ name, icon }: iconType) => (
               <Tooltip
                 key={`technology-item-${name}`}
                 content={name}
