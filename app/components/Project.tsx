@@ -56,9 +56,9 @@ export const Project = (project: projectType) => {
         <CardBody className="text-gray-400 text-lg flex justify-between gap-4">
           {description}
           <div className=" flex flex-wrap gap-2">
-            {technologies.map((technology: string) => (
+            {technologies.map((technology: string, index: number) => (
               <Chip
-                key={`technology-item-${technology}`}
+                key={`technology-item-${index}`}
                 // variant="flat"
                 size="sm"
               >
