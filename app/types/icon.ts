@@ -1,1 +1,1 @@
-export type IconType = { name: string; icon: JSX.Element };
+export type iconType = { name: string; icon: JSX.Element };
