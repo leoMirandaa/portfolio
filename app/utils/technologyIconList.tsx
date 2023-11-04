@@ -1,4 +1,4 @@
-import { IconType } from "../types";
+import { iconType } from "../types";
 import {
   JavascriptSVG,
   TypescriptSVG,
@@ -15,7 +15,7 @@ import {
 } from "../components/ui/icons";
 
 let color = "#9ca3af";
-export const techonologyIconList: IconType[] = [
+export const techonologyIconList: iconType[] = [
   {
     name: "Javascript",
     icon: <JavascriptSVG color={color} />,
