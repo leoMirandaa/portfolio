@@ -1,4 +1,4 @@
 export * from "./education";
-export * from "./icon";
+export * from "./iconT";
 export * from "./project";
 export * from "./contactData";
