@@ -1,12 +1,15 @@
-import { ReactElement, forwardRef, useEffect } from "react";
+import { forwardRef, useEffect } from "react";
+import Image from "next/image";
 
-import { Avatar, Button, Card, CardBody, Tooltip } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
+import { Avatar } from "@nextui-org/avatar";
+import { Tooltip } from "@nextui-org/tooltip";
+import { Card, CardBody } from "@nextui-org/card";
 
 import { Education } from "../Education";
 import { iconType, educationType } from "@/app/types";
-import aboutAnimation from "../../utils/aboutSectionAnimations";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
-import Image from "next/image";
+import aboutAnimation from "../../utils/aboutSectionAnimations";
 
 // eslint-disable-next-line react/display-name
 const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
@@ -26,14 +29,19 @@ export default IconComponent;
 
 export const Home = () => {
   const { fullName, profession, whoAmI, quote } = whoAmIData;
+  const mq = window.matchMedia("(min-width: 1024px)");
 
   useEffect(() => {
-    aboutAnimation.whoAmIAnimation();
-    aboutAnimation.professionAnimation();
-    aboutAnimation.quoteAnimation();
-    aboutAnimation.techonologyIconListAnimation();
-    aboutAnimation.verticalImageAnimation();
-    aboutAnimation.educationContentAnimation();
+    if (mq.matches) {
+      aboutAnimation.whoAmIAnimation();
+      aboutAnimation.professionAnimation();
+      aboutAnimation.quoteAnimation();
+      aboutAnimation.techonologyIconListAnimation();
+      aboutAnimation.verticalImageAnimation();
+      aboutAnimation.educationContentAnimation();
+    } else {
+      aboutAnimation.mobileAnimation();
+    }
   }, []);
 
   return (
@@ -50,14 +58,14 @@ export const Home = () => {
         </CardBody>
       </Card>
 
-      <Card className="col-span-full lg:row-start-1 lg:row-span-1 lg:col-span-2  opacity-0 whoAmICard">
+      <Card className="col-span-full lg:row-start-1 lg:row-span-1 lg:col-span-2  opacity-0 mobile-animation whoAmICard">
         <CardBody className="gap-2">
-          <h2 className="text-3xl font-bold">Who am I?</h2>
-          <p className="text-lg text-gray-400">{whoAmI} </p>
+          <div className="text-3xl font-bold">Who am I?</div>
+          <div className="text-xl text-gray-400">{whoAmI} </div>
         </CardBody>
       </Card>
 
-      <Card className="col-span-full row-start-2 row-end-3 lg:row-start-2 lg:col-start-1 lg:col-span-1 bg-blue opacity-0 professionCard">
+      <Card className="col-span-full row-start-2 row-end-3 lg:row-start-2 lg:col-start-1 lg:col-span-1 bg-blue opacity-0 mobile-animation professionCard">
         <CardBody className="justify-center items-center">
           <h2 className="text-2xl lg:text-3xl font-bold  text-center">
             {profession}
@@ -65,13 +73,15 @@ export const Home = () => {
         </CardBody>
       </Card>
 
-      <Card className="hidden lg:block col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 quoteCard">
+      <Card className=" hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
-          <div className="text-xl font-bold text-center">{quote}</div>
+          <div className="text-3xl font-bold text-center">
+            &#34;{quote}&#34;
+          </div>
         </CardBody>
       </Card>
 
-      <Card className="col-span-full lg:row-start-3 lg:row-span-2 lg:col-start-1 lg:col-span-1 opacity-0 technologyIconList">
+      <Card className="col-span-full lg:row-start-3 lg:row-span-2 lg:col-start-1 lg:col-span-1 opacity-0 mobile-animation technologyIconList">
         <CardBody className="gap-4">
           <h2 className="text-3xl font-bold">
             Technologies I have worked with
@@ -92,24 +102,22 @@ export const Home = () => {
       </Card>
 
       {/* vertical img */}
-      <div className="radius col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl relative opacity-0 verticalImage">
+      <div className="hidden lg:block lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl relative opacity-0 mobile-animation verticalImage">
         <Image
-          // className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl opacity-0 verticalImage"
           src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          priority={true}
           alt="profile image"
           fill
-          // sizes="100px"
           style={{
             width: "100%",
             height: "100%",
-            // objectFit: "contain",
-            objectFit: "fill",
+            objectFit: "cover",
             borderRadius: "15px",
           }}
         />
       </div>
 
-      <Card className="col-span-full lg:row-start-4 lg:row-span-1 lg:col-start-2 lg:col-span-2 opacity-0 educationContent">
+      <Card className="col-span-full lg:row-start-4 lg:row-span-1 lg:col-start-2 lg:col-span-2 opacity-0 mobile-animation educationContent">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="hidden lg:block icon icon-tabler icon-tabler-timeline absolute top-0 -right-7"
