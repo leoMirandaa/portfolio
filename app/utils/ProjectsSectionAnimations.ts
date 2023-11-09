@@ -1,14 +1,25 @@
 import { inView, animate } from "motion";
 
-const videoAnimation = () => {
-  const video = document.querySelectorAll(".videoSection");
-
-  inView(video, () => {
+const titleAnimation = () => {
+  inView(".titleSection", (info) => {
     animate(
-      video,
+      info.target,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateX(-100px) ", "none"],
+      },
+      { duration: 0.5, delay: 0.1 }
+    );
+  });
+};
+
+const videoAnimation = () => {
+  inView(".videoSection", (info) => {
+    animate(
+      info.target,
+      {
+        opacity: [0, 0.2, 0.8, 1],
+        // transform: ["translateY(100px) ", "none"],
       },
       { duration: 0.5, delay: 0.2 }
     );
@@ -16,11 +27,9 @@ const videoAnimation = () => {
 };
 
 const descriptionAnimation = () => {
-  const description = document.querySelectorAll(".descriptionCard");
-
-  inView(description, () => {
+  inView(".descriptionCard", (info) => {
     animate(
-      description,
+      info.target,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateY(-100px) ", "none"],
@@ -31,11 +40,9 @@ const descriptionAnimation = () => {
 };
 
 const githubUrlAnimation = () => {
-  const githubLink = document.querySelectorAll(".githubUrlCard");
-
-  inView(githubLink, () => {
+  inView(".githubUrlCard", (info) => {
     animate(
-      githubLink,
+      info.target,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateX(100px) ", "none"],
@@ -46,11 +53,9 @@ const githubUrlAnimation = () => {
 };
 
 const websiteUrlAnimation = () => {
-  const websiteLink = document.querySelectorAll(".websiteUrlCard");
-
-  inView(websiteLink, () => {
+  inView(".websiteUrlCard", (info) => {
     animate(
-      websiteLink,
+      info.target,
       {
         opacity: [0, 0.2, 0.8, 1],
         transform: ["translateX(100px) ", "none"],
@@ -60,9 +65,17 @@ const websiteUrlAnimation = () => {
   });
 };
 
+const mobileAnimation = () => {
+  inView(".mobile-animation", (info) => {
+    animate(info.target, { opacity: 1 }, { duration: 0.5, delay: 0.2 });
+  });
+};
+
 export default {
+  titleAnimation,
   videoAnimation,
   descriptionAnimation,
   websiteUrlAnimation,
   githubUrlAnimation,
+  mobileAnimation,
 };
