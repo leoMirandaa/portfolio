@@ -59,9 +59,16 @@ const formAnimation = () => {
   });
 };
 
+const mobileAnimation = () => {
+  inView(".mobile-animation", (info) => {
+    animate(info.target, { opacity: 1 }, { duration: 0.5, delay: 0.2 });
+  });
+};
+
 export default {
   emailAnimation,
   githubAnimation,
   linkedInAnimation,
   formAnimation,
+  mobileAnimation,
 };

@@ -1,5 +1,7 @@
 import { useState, FormEvent } from "react";
-import { Button, Input, Textarea } from "@nextui-org/react";
+
+import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
 
 export const Form = () => {
   const [name, setName] = useState<string>("");
