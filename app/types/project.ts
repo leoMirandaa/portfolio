@@ -1,7 +1,6 @@
 import React from "react";
 
 export type projectType = {
-  bgColor: string;
   icon: React.ReactElement;
   title: string;
   subtitle: string;

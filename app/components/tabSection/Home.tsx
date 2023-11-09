@@ -1,10 +1,10 @@
 import { forwardRef, useEffect } from "react";
 import Image from "next/image";
 
-import { Button } from "@nextui-org/button";
 import { Avatar } from "@nextui-org/avatar";
-import { Tooltip } from "@nextui-org/tooltip";
+import { Button } from "@nextui-org/button";
 import { Card, CardBody } from "@nextui-org/card";
+import { Tooltip } from "@nextui-org/tooltip";
 
 import { Education } from "../Education";
 import { iconType, educationType } from "@/app/types";
@@ -61,7 +61,7 @@ export const Home = () => {
       <Card className="col-span-full lg:row-start-1 lg:row-span-1 lg:col-span-2  opacity-0 mobile-animation whoAmICard">
         <CardBody className="gap-2">
           <div className="text-3xl font-bold">Who am I?</div>
-          <div className="text-xl text-gray-400">{whoAmI} </div>
+          <div className="text-lg text-gray-400">{whoAmI} </div>
         </CardBody>
       </Card>
 
@@ -73,7 +73,7 @@ export const Home = () => {
         </CardBody>
       </Card>
 
-      <Card className=" hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
+      <Card className="hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
           <div className="text-3xl font-bold text-center">
             &#34;{quote}&#34;
@@ -87,7 +87,7 @@ export const Home = () => {
             Technologies I have worked with
           </h2>
 
-          <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+          <div className="flex flex-wrap justify-center lg:justify-center gap-x-9 gap-y-6">
             {techonologyIconList.map(({ name, icon }: iconType) => (
               <Tooltip
                 key={`technology-item-${name}`}
