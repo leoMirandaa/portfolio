@@ -7,6 +7,18 @@ import { projectType } from "../types";
 
 export const ProjectList: projectType[] = [
   {
+    icon: <MagentaKitchenSVG />,
+    title: "Magenta Kitchen",
+    subtitle: "Restaurant Menu",
+    technologies: ["React", "Next js", "Css modules", "Antd"],
+    description:
+      "Restaurant menu created with the purpose to have an elegant digital menu, with the capability to use it with QR code and show the elemental restaurant information and all the dishes available.",
+    imgUrl: "/videos/magenta.webp",
+    videoUrl: "/videos/magenta.mp4",
+    githubUrl: "https://github.com/leomirandaa/restaurant-menu.git",
+    websiteUrl: "https://magentakitchen.vercel.app/",
+  },
+  {
     icon: <Sk8terSVG />,
     title: "Sk8ter",
     subtitle: "E-commerce",
@@ -23,18 +35,6 @@ export const ProjectList: projectType[] = [
     imgUrl: "/videos/skate.webp",
     videoUrl: "/videos/sk8.mp4",
     githubUrl: "https://github.com/leomirandaa/Clothing-store.git",
-    websiteUrl: "https://www.google.com/",
-  },
-  {
-    icon: <MagentaKitchenSVG />,
-    title: "Magenta Kitchen",
-    subtitle: "Restaurant Menu",
-    technologies: ["React", "Next js", "Css modules", "Antd"],
-    description:
-      "Restaurant menu created with the purpose to have an elegant digital menu, with the capability to use it with QR code and show the elemental restaurant information and all the dishes available.",
-    imgUrl: "/videos/magenta.webp",
-    videoUrl: "/videos/magenta.mp4",
-    githubUrl: "https://github.com/leomirandaa/restaurant-menu.git",
     websiteUrl: "https://www.google.com/",
   },
   {
