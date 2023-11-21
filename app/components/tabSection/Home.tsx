@@ -2,7 +2,7 @@ import { forwardRef, useEffect } from "react";
 import Image from "next/image";
 
 import { Avatar } from "@nextui-org/avatar";
-import { Button } from "@nextui-org/button";
+// import { Button } from "@nextui-org/button";
 import { Card, CardBody } from "@nextui-org/card";
 import { Tooltip } from "@nextui-org/tooltip";
 
@@ -45,16 +45,17 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="grid grid-rows-8 grid-cols-4 lg:grid-cols-3 gap-6">
+    <div className="grid grid-rows-8 grid-cols-4 lg:grid-cols-3 gap-5">
       <Card className="col-span-full lg:row-start-2 lg:row-span-2 lg:col-start-2 lg:col-span-1">
         <CardBody className="flex-col items-center justify-center gap-2">
           <Avatar
-            src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-            className="w-28 h-28 text-large"
+            name="LM"
+            src="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1700603685/portfolio/avatar-profile_lb9hd9.jpg"
+            className="w-24 h-24 text-large brightness-90"
           />
           <h1 className="text-4xl font-bold">{fullName}</h1>
 
-          <Button>Download CV</Button>
+          {/* <Button>Download CV</Button> */}
         </CardBody>
       </Card>
 
@@ -87,7 +88,7 @@ export const Home = () => {
             Technologies I have worked with
           </h2>
 
-          <div className="flex flex-wrap justify-center lg:justify-center gap-x-9 gap-y-6">
+          <div className="flex flex-wrap justify-center lg:justify-center gap-x-10 gap-y-6">
             {techonologyIconList.map(({ name, icon }: iconType) => (
               <Tooltip
                 key={`technology-item-${name}`}
@@ -102,9 +103,9 @@ export const Home = () => {
       </Card>
 
       {/* vertical img */}
-      <div className="hidden lg:block lg:row-start-1 lg:row-span-2 lg:col-start-3 rounded-xl relative opacity-0 mobile-animation verticalImage">
+      <div className="hidden lg:block lg:row-start-1 lg:row-span-2 lg:col-start-3  lg:h-[350px] rounded-xl relative opacity-0 mobile-animation verticalImage">
         <Image
-          src="https://images.unsplash.com/photo-1613980790147-f4f449df0dd9?auto=format&fit=crop&q=80&w=1587&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1502581827181-9cf3c3ee0106?q=80&w=1576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           priority={true}
           alt="profile image"
           fill
