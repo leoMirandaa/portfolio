@@ -23,7 +23,7 @@ export const Contact = () => {
   }, []);
 
   return (
-    <div className="grid grid-rows-2 grid-cols-2 gap-6 max-w-2xl mx-auto">
+    <div className="grid grid-rows-2 grid-cols-2 gap-5 max-w-2xl mx-auto">
       <Card className="col-span-full lg:row-start-1 lg:row-span-1 lg:col-span-1 opacity-0 mobile-animation emailCard">
         <CardBody className="flex flex-row justify-center items-center gap-2">
           <Button
