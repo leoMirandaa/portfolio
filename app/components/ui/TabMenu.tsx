@@ -1,7 +1,5 @@
 "use client";
-// import { Tabs, Tab } from "@nextui-org/react";
 import { Tabs, Tab } from "@nextui-org/tabs";
-
 import { Home, Contact, Projects } from "../tabSection";
 
 export default function TabMenu() {
