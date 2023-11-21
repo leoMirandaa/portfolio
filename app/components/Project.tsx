@@ -1,13 +1,15 @@
 import { useEffect } from "react";
-import { Card, CardBody, CardHeader, Chip, Link } from "@nextui-org/react";
+import Link from "next/link";
+
+import { Card, CardBody } from "@nextui-org/card";
+import { Chip } from "@nextui-org/chip";
+
 import { projectType } from "../types";
-import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
-import Image from "next/image";
 import { GithubSVG, LinkSVG } from "./ui/icons";
+import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
 
 export const Project = (project: projectType) => {
   const {
-    bgColor,
     description,
     title,
     icon,
@@ -18,7 +20,12 @@ export const Project = (project: projectType) => {
     websiteUrl,
   } = project;
 
+  const mq = window.matchMedia("(min-width: 1024px)");
+
   useEffect(() => {
+    if (!mq.matches) return ProjectsSectionAnimations.mobileAnimation();
+
+    ProjectsSectionAnimations.titleAnimation();
     ProjectsSectionAnimations.videoAnimation();
     ProjectsSectionAnimations.descriptionAnimation();
     ProjectsSectionAnimations.websiteUrlAnimation();
@@ -26,23 +33,19 @@ export const Project = (project: projectType) => {
   }, []);
 
   return (
-    // <div className="grid grid-rows-8 grid-cols-4 lg:grid-cols-5 gap-4">
     <div className="grid grid-rows-8 grid-cols-4 gap-6 pb-4 overflow-hidden">
-      <div className="col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white">
+      <div className="flex lg:hidden items-center col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white opacity-0 mobile-animation titleSection">
+        <span className="bg-[#303036] p-2 rounded-md mr-2"> {icon}</span>
         {title}
       </div>
 
-      <div
-        // style={{ width: "100%", height: "100%", position: "relative" }}
-        className="col-span-full lg:row-start-2 lg:row-end-4 lg:col-start-1 lg:col-end-3 h-52 lg:h-auto videoSection"
-      >
+      <div className="col-span-full lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-3  opacity-0 mobile-animation videoSection">
         <video
           className="rounded-xl  border-1 border-[#212121]"
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "contain",
-            // objectFit: "fill",
+            objectFit: "cover",
           }}
           autoPlay
           loop
@@ -52,14 +55,17 @@ export const Project = (project: projectType) => {
         ></video>
       </div>
 
-      <Card className="col-span-full lg:row-start-2 lg:row-end-3 lg:col-start-3 lg:col-end-5 opacity-0 descriptionCard">
+      <Card className="col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-3 lg:col-end-5 lg:min-h-[250px]  opacity-0 mobile-animation descriptionCard">
         <CardBody className="text-gray-400 text-lg flex justify-between gap-4">
+          <div className="hidden lg:flex col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white opacity-0 mobile-animation titleSection">
+            <span className="bg-[#303036] p-2 rounded-md mr-2"> {icon}</span>{" "}
+            {title}
+          </div>
           {description}
           <div className=" flex flex-wrap gap-2">
             {technologies.map((technology: string, index: number) => (
               <Chip
                 key={`technology-item-${index}`}
-                // variant="flat"
                 size="sm"
               >
                 {technology}
@@ -69,7 +75,7 @@ export const Project = (project: projectType) => {
         </CardBody>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:col-end-4 opacity-0 githubUrlCard">
+      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:max-h-24 lg:col-end-4 opacity-0 mobile-animation githubUrlCard">
         <Link
           href={websiteUrl}
           rel="noopener noreferrer"
@@ -82,7 +88,7 @@ export const Project = (project: projectType) => {
         </Link>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:col-end-5 opacity-0 websiteUrlCard">
+      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:max-h-24 lg:col-end-5  opacity-0 mobile-animation websiteUrlCard">
         <Link
           href={githubUrl}
           rel="noopener noreferrer"

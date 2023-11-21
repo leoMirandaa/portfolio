@@ -62,7 +62,7 @@ export const Home = () => {
       <Card className="col-span-full lg:row-start-1 lg:row-span-1 lg:col-span-2  opacity-0 mobile-animation whoAmICard">
         <CardBody className="gap-2">
           <div className="text-3xl font-bold">Who am I?</div>
-          <div className="text-xl text-gray-400">{whoAmI} </div>
+          <div className="text-lg text-gray-400">{whoAmI} </div>
         </CardBody>
       </Card>
 
@@ -74,7 +74,7 @@ export const Home = () => {
         </CardBody>
       </Card>
 
-      <Card className=" hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
+      <Card className="hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
           <div className="text-3xl font-bold text-center">
             &#34;{quote}&#34;

@@ -92,7 +92,7 @@ const quoteAnimation = () => {
 
 const mobileAnimation = () => {
   inView(".mobile-animation", (info) => {
-    animate(info.target, { opacity: 1 }, { duration: 0.5, delay: 0.3 });
+    animate(info.target, { opacity: 1 }, { duration: 0.5, delay: 0.2 });
   });
 };
 
