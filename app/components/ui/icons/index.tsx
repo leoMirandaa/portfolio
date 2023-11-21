@@ -253,7 +253,7 @@ export const GithubSVG = () => {
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      width={60}
+      width={50}
       fill="#ffffff"
     >
       <title>GitHub</title>
@@ -268,7 +268,7 @@ export const LinkedInSVG = () => {
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      width={60}
+      width={50}
       fill="#ffffff"
     >
       <title>LinkedIn</title>
@@ -288,7 +288,7 @@ export const LinkSVG = () => {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      width={60}
+      width={50}
     >
       <path
         stroke="none"
@@ -312,7 +312,7 @@ export const MailSVG = () => {
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      width={60}
+      width={50}
       fill="#ffffff"
     >
       <path
