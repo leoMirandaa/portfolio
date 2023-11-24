@@ -35,7 +35,7 @@ export const ProjectList: projectType[] = [
     imgUrl: "/videos/skate.webp",
     videoUrl: "/videos/sk8.mp4",
     githubUrl: "https://github.com/leomirandaa/Clothing-store.git",
-    websiteUrl: "https://www.google.com/",
+    websiteUrl: "",
   },
   {
     icon: <ShopApiSVG />,
