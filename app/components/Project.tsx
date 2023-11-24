@@ -83,7 +83,11 @@ export const Project = (project: projectType) => {
           className="min-h-full flex justify-center items-center"
         >
           <CardBody className="justify-center items-center">
-            <LinkSVG />
+            {!websiteUrl ? (
+              <h2 className="font-bold text-xl text-gray-400">Coming Soon!</h2>
+            ) : (
+              <LinkSVG />
+            )}
           </CardBody>
         </Link>
       </Card>
