@@ -70,7 +70,7 @@ export const Form = () => {
   }
 
   if (submitted) {
-    return toast("Email has been sent", {
+    toast("Email has been sent", {
       className: "my-classname",
       duration: 3000,
       icon: <CircleCheckSVG />,
