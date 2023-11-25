@@ -22,7 +22,8 @@
     "motion": "^10.16.4",
     "next": "^14.0.2-canary.25",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sonner": "^1.2.3"
   },
   "devDependencies": {
     "@types/node": "^20",

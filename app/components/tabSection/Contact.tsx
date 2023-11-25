@@ -37,7 +37,10 @@ export const Contact = () => {
         </CardBody>
       </Card>
 
-      <Card className="col-span-full lg:row-start-2 lg:row-span-1 lg:col-span-1 cursor-pointer opacity-0 mobile-animation linkedInCard">
+      <Card
+        isHoverable
+        className="col-span-full lg:row-start-2 lg:row-span-1 lg:col-span-1 cursor-pointer opacity-0 mobile-animation linkedInCard"
+      >
         <Link
           href={linkedIn}
           rel="noopener noreferrer"
@@ -53,7 +56,10 @@ export const Contact = () => {
         </Link>
       </Card>
 
-      <Card className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-2 cursor-pointer opacity-0 mobile-animation githubCard ">
+      <Card
+        isHoverable
+        className="col-span-full lg:row-start-1 lg:row-span-2 lg:col-start-2 cursor-pointer opacity-0 mobile-animation githubCard "
+      >
         <Link
           href={github}
           rel="noopener noreferrer"
@@ -63,7 +69,7 @@ export const Contact = () => {
           <CardBody className="flex justify-center items-center gap-2">
             <GithubSVG />
             <h1 className="text-3xl font-bold">Github Profile</h1>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-gray-400  text-center">
               Find more of my repositories
             </p>
           </CardBody>
