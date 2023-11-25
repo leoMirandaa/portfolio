@@ -54,6 +54,9 @@ export const Form = () => {
       .then((res) => {
         if (res.code === 200) {
           setSubmitted(true);
+          setName("");
+          setEmail("");
+          setMessage("");
         } else {
           setError(res.message);
         }
