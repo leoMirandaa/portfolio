@@ -39,7 +39,7 @@ export const Project = (project: projectType) => {
         {title}
       </div>
 
-      <div className="col-span-full lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-3  opacity-0 mobile-animation videoSection">
+      <div className="col-span-full lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-3 opacity-0 mobile-animation videoSection">
         <video
           className="rounded-xl  border-1 border-[#212121]"
           style={{
@@ -55,7 +55,7 @@ export const Project = (project: projectType) => {
         ></video>
       </div>
 
-      <Card className="col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-3 lg:col-end-5 lg:min-h-[250px]  opacity-0 mobile-animation descriptionCard">
+      <Card className="col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-3 lg:col-end-5 lg:min-h-[250px] opacity-0 mobile-animation descriptionCard">
         <CardBody className="text-gray-400 text-lg flex justify-between gap-4">
           <div className="hidden lg:flex col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white opacity-0 mobile-animation titleSection">
             <span className="bg-[#303036] p-2 rounded-md mr-2"> {icon}</span>{" "}
@@ -75,7 +75,10 @@ export const Project = (project: projectType) => {
         </CardBody>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:max-h-24 lg:col-end-4 opacity-0 mobile-animation githubUrlCard">
+      <Card
+        isHoverable
+        className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:max-h-24 lg:col-end-4 opacity-0 mobile-animation githubUrlCard"
+      >
         <Link
           href={websiteUrl}
           rel="noopener noreferrer"
@@ -92,7 +95,10 @@ export const Project = (project: projectType) => {
         </Link>
       </Card>
 
-      <Card className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:max-h-24 lg:col-end-5  opacity-0 mobile-animation websiteUrlCard">
+      <Card
+        isHoverable
+        className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:max-h-24 lg:col-end-5  opacity-0 mobile-animation websiteUrlCard"
+      >
         <Link
           href={githubUrl}
           rel="noopener noreferrer"
