@@ -31,7 +31,7 @@ export const ProjectList: projectType[] = [
       "React hook form",
     ],
     description:
-      "Made as the final project for a Full Stack degree, created to apply all the knowledge obtained from frontend to backend technologies. The system has authentication, a dashboard, dark mode, and a friendly user interface.",
+      "Dynamic e-commerce web system selling skateboards in a friendly and intuitive interface. The system has authentication, a dashboard and also dark mode.",
     imgUrl: "/videos/skate.webp",
     videoUrl: "/videos/sk8.mp4",
     githubUrl: "https://github.com/leomirandaa/Clothing-store.git",
