@@ -34,7 +34,7 @@ export const ProjectList: projectType[] = [
       "Dynamic e-commerce web system selling skateboards in a friendly and intuitive interface. The system has authentication, a dashboard and also dark mode.",
     imgUrl: "/videos/skate.webp",
     videoUrl: "/videos/sk8.mp4",
-    githubUrl: "https://github.com/leomirandaa/Clothing-store.git",
+    githubUrl: "https://github.com/leoMirandaa/sk8ter-shop",
     websiteUrl: "",
   },
   {
