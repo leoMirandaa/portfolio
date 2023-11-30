@@ -1,13 +1,16 @@
 # Portfolio
 
-In this portfolio I am showing information about me, technologies I've worked with, some of my last projects that i was working and live version of each one.
+Portfolio showing information about me, technologies I've worked with and their live version and also a contact section.
+
+![portfolio](https://github.com/leoMirandaa/portfolio/assets/61714687/5992a431-b457-4db1-b9b1-693e7aaaa124)
+
 
 ## Author
 
 **Leo Mranda**
 
-- Repository-name ""
-- Released on ""
+- Repository-name "portfolio"
+- Released on "Vercel"
 - LinkedIn ""
 
 ## Installation
