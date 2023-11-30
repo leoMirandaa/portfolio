@@ -7,7 +7,7 @@ Portfolio showing information about me, technologies I've worked with and their 
 
 ## Author
 
-**Leo Mranda**
+**Leo Miranda**
 
 - Repository-name "portfolio"
 - Released on "Vercel"
