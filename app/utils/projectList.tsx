@@ -32,8 +32,8 @@ export const ProjectList: projectType[] = [
     ],
     description:
       "Dynamic e-commerce web system selling skateboards in a friendly and intuitive interface. The system has authentication, a dashboard and also dark mode.",
-    imgUrl: "/videos/skate.webp",
-    videoUrl: "/videos/sk8.mp4",
+    imgUrl: "/videos/sk8ter.webp",
+    videoUrl: "/videos/sk8ter.mp4",
     githubUrl: "https://github.com/leoMirandaa/sk8ter-shop",
     websiteUrl: "",
   },
@@ -50,9 +50,8 @@ export const ProjectList: projectType[] = [
       "Swagger",
     ],
     description:
-      "Backed e-commerce project that allows to manage users, categories, coupons and products with the endpoints ready to play with. And also you can check API documentation with swagger.",
-    imgUrl:
-      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1698447993/portfolio/shop-api_b2pb56.jpg",
+      "Backed e-commerce project that allows to manage users, categories, coupons and products with the endpoints ready to play with. Includes swagger docs.",
+    imgUrl: "/videos/shop-api.webp",
     videoUrl: "",
     githubUrl: "https://github.com/leomirandaa/shop-API.git",
     websiteUrl: "https://www.google.com/",
