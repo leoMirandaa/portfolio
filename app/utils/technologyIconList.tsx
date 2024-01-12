@@ -11,7 +11,8 @@ import {
   PrimeVueSVG,
   QuasarSVG,
   MongoDBSVG,
-  FirebaseSVG,
+  ShadcnSVG,
+  // FirebaseSVG,
 } from "../components/ui/icons";
 
 let color = "#9ca3af";
@@ -49,10 +50,13 @@ export const techonologyIconList: iconType[] = [
     name: "PrimeReact",
     icon: <PrimeReactSVG color={color} />,
   },
-
   {
     name: "NextUI",
     icon: <NextUISVG color={color} />,
+  },
+  {
+    name: "Shadcn",
+    icon: <ShadcnSVG color={color} />,
   },
   {
     name: "Express",
@@ -61,9 +65,5 @@ export const techonologyIconList: iconType[] = [
   {
     name: "MongoDB",
     icon: <MongoDBSVG color={color} />,
-  },
-  {
-    name: "Firebase",
-    icon: <FirebaseSVG color={color} />,
   },
 ];
