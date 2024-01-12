@@ -30,7 +30,7 @@ IconComponent.displayName = "IconComponent";
 export default IconComponent;
 const { fullName, profession, whoAmI, quote } = whoAmIData;
 
-export const Home: NextPage = () => {
+export const HomePage: NextPage = () => {
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
 
