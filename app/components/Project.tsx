@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import Link from "next/link";
 
@@ -20,9 +21,8 @@ export const Project = (project: projectType) => {
     websiteUrl,
   } = project;
 
-  const mq = window.matchMedia("(min-width: 1024px)");
-
   useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
     if (!mq.matches) return ProjectsSectionAnimations.mobileAnimation();
 
     ProjectsSectionAnimations.titleAnimation();
