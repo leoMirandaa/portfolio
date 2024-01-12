@@ -1,7 +1,6 @@
 "use client";
 import { forwardRef, useEffect } from "react";
 import Image from "next/image";
-import { NextPage } from "next";
 
 import { Avatar } from "@nextui-org/avatar";
 // import { Button } from "@nextui-org/button";
@@ -30,7 +29,7 @@ IconComponent.displayName = "IconComponent";
 export default IconComponent;
 const { fullName, profession, whoAmI, quote } = whoAmIData;
 
-export const HomePage: NextPage = () => {
+export const About = () => {
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
 
