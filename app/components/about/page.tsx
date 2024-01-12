@@ -11,25 +11,26 @@ import { Education } from "../Education";
 import { iconType, educationType } from "@/app/types";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import aboutAnimation from "../../utils/aboutSectionAnimations";
+import IconComponent from "../ui/IconComponent";
 
-// eslint-disable-next-line react/display-name
-const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
-  (props, ref): any => {
-    return (
-      <p
-        ref={ref}
-        {...props}
-      >
-        {props.icon}
-      </p>
-    );
-  }
-);
-IconComponent.displayName = "IconComponent";
-export default IconComponent;
+// // eslint-disable-next-line react/display-name
+// const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
+//   (props, ref): any => {
+//     return (
+//       <p
+//         ref={ref}
+//         {...props}
+//       >
+//         {props.icon}
+//       </p>
+//     );
+//   }
+// );
+// IconComponent.displayName = "IconComponent";
+// export default IconComponent;
 const { fullName, profession, whoAmI, quote } = whoAmIData;
 
-export const About = () => {
+export default function About() {
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
 
@@ -160,4 +161,4 @@ export const About = () => {
       </Card>
     </div>
   );
-};
+}
