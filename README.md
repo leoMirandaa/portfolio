@@ -1,9 +1,10 @@
 # Portfolio
 
+<a href="https://leomiranda.vercel.app/" target="_blank">Live Demo</a>
+
 Portfolio showing information about me, technologies I've worked with and their live version and also a contact section.
 
 ![portfolio](https://github.com/leoMirandaa/portfolio/assets/61714687/0d29ca0e-f280-478d-907d-987cd14941af)
-
 
 ## Author
 
@@ -37,4 +38,5 @@ bun dev
 
 - Next 13
 - NextUI
+- Tailwind
 - Motion one
