@@ -62,8 +62,6 @@ export const NavbarSection = () => {
         ],
       }}
       isBlurred
-      // shouldHideOnScroll
-      // position="static"
     >
       <NavbarContent
         className=" sm:flex gap-4"
