@@ -1,5 +1,5 @@
 "use client";
-import { forwardRef, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 
 import { Avatar } from "@nextui-org/avatar";
@@ -13,21 +13,6 @@ import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import aboutAnimation from "../../utils/aboutSectionAnimations";
 import IconComponent from "../ui/IconComponent";
 
-// // eslint-disable-next-line react/display-name
-// const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
-//   (props, ref): any => {
-//     return (
-//       <p
-//         ref={ref}
-//         {...props}
-//       >
-//         {props.icon}
-//       </p>
-//     );
-//   }
-// );
-// IconComponent.displayName = "IconComponent";
-// export default IconComponent;
 const { fullName, profession, whoAmI, quote } = whoAmIData;
 
 export default function About() {
