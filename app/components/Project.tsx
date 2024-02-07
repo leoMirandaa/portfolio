@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Card, CardBody } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 
-import { projectType } from "../types";
+import { TechnologyType, ProjectType } from "../types";
 import { GithubSVG, LinkSVG } from "./ui/icons";
 import ProjectsSectionAnimations from "../utils/ProjectsSectionAnimations";
 
-export const Project = (project: projectType) => {
+export const Project = (project: ProjectType) => {
   const {
     description,
     title,
@@ -63,21 +63,28 @@ export const Project = (project: projectType) => {
           </div>
           {description}
           <div className=" flex flex-wrap gap-2">
-            {technologies.map((technology: string, index: number) => (
-              <Chip
-                key={`technology-item-${index}`}
-                size="sm"
-              >
-                {technology}
-              </Chip>
-            ))}
+            {technologies.map(
+              ({ name, icon }: TechnologyType, index: number) => (
+                <Chip
+                  key={`technology-item-${index}`}
+                  size="sm"
+                >
+                  <span className="flex items-center gap-2">
+                    {icon}
+                    {name}
+                  </span>
+                </Chip>
+              )
+            )}
           </div>
         </CardBody>
       </Card>
 
       <Card
         isHoverable
-        className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:max-h-24 lg:col-end-4 opacity-0 mobile-animation githubUrlCard"
+        className={`${
+          websiteUrl === "NONE" && "hidden"
+        } col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-3 lg:max-h-24 lg:col-end-4 opacity-0 mobile-animation githubUrlCard`}
       >
         <Link
           href={websiteUrl}
@@ -99,7 +106,11 @@ export const Project = (project: projectType) => {
 
       <Card
         isHoverable
-        className="col-span-2 lg:row-start-3 lg:row-end-4 lg:col-start-4 lg:max-h-24 lg:col-end-5  opacity-0 mobile-animation websiteUrlCard"
+        className={`${
+          websiteUrl === "NONE"
+            ? "lg:col-start-3 col-span-4"
+            : "lg:col-start-4 col-span-2"
+        }  lg:row-start-3 lg:row-end-4 lg:max-h-24 lg:col-end-5 opacity-0 mobile-animation websiteUrlCard`}
       >
         <Link
           href={githubUrl}

@@ -1,10 +1,13 @@
 import React from "react";
+import { iconType } from ".";
 
-export type projectType = {
+export type TechnologyType = iconType;
+
+export type ProjectType = {
   icon: React.ReactElement;
   title: string;
   subtitle: string;
-  technologies: string[];
+  technologies: TechnologyType[];
   description: string;
   imgUrl: string;
   videoUrl: string;
