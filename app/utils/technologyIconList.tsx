@@ -17,7 +17,7 @@ import {
 let color: string = "#9ca3af";
 export const techonologyIconList: iconType[] = [
   {
-    name: "Javascript",
+    name: "JavaScript",
     icon: (
       <JavascriptSVG
         color={color}
@@ -26,7 +26,7 @@ export const techonologyIconList: iconType[] = [
     ),
   },
   {
-    name: "Typescript",
+    name: "TypeScript",
     icon: (
       <TypescriptSVG
         color={color}

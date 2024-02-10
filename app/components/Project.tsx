@@ -70,7 +70,7 @@ export const Project = (project: ProjectType) => {
                   size="sm"
                 >
                   <span className="flex items-center gap-2">
-                    {icon}
+                    {/* {icon} */}
                     {name}
                   </span>
                 </Chip>
