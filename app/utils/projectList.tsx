@@ -38,7 +38,7 @@ export const ProjectList: ProjectType[] = [
       },
 
       {
-        name: "Typescript",
+        name: "TypeScript",
         icon: (
           <TypescriptSVG
             color="#3178C6"
@@ -127,7 +127,7 @@ export const ProjectList: ProjectType[] = [
     subtitle: "E-commerce",
     technologies: [
       {
-        name: "Javascript",
+        name: "JavaScript",
         icon: (
           <JavascriptSVG
             color="#F7DF1E"
@@ -145,7 +145,7 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "Typescript",
+        name: "TypeScript",
         icon: (
           <TypescriptSVG
             color="#3178C6"
@@ -195,7 +195,7 @@ export const ProjectList: ProjectType[] = [
     subtitle: "E-commerse back-end",
     technologies: [
       {
-        name: "Javascript",
+        name: "JavaScript",
         icon: (
           <JavascriptSVG
             color="#F7DF1E"
@@ -204,7 +204,7 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "Typescript",
+        name: "TypeScript",
         icon: (
           <TypescriptSVG
             color="#3178C6"
