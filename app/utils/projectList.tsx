@@ -17,11 +17,63 @@ import {
   SwaggerSVG,
   TailwindSVG,
   TypescriptSVG,
+  VueSVG,
 } from "../components/ui/icons";
 import { ProjectType } from "../types";
 import { NextSVG } from "../components/ui/icons/index";
 
 export const ProjectList: ProjectType[] = [
+  {
+    icon: <ShadcnLandingSVG />,
+    title: "Shadcn/Vue Landing page",
+    subtitle: "Landing page template",
+    technologies: [
+      {
+        name: "Vue",
+        icon: (
+          <VueSVG
+            color="#61DAFB"
+            size={16}
+          />
+        ),
+      },
+
+      {
+        name: "TypeScript",
+        icon: (
+          <TypescriptSVG
+            color="#3178C6"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "Shadcn-Vue",
+        icon: (
+          <ShadcnSVG
+            color="#000000"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "Tailwind",
+        icon: (
+          <TailwindSVG
+            color="#06B6D4"
+            size={16}
+          />
+        ),
+      },
+    ],
+    description:
+      "Vue.js-powered landing page with all the essentials to showcase your product, service, or event. Enjoy a fully responsive, customizable, dark mode-enabled experience with optimized meta tags and an intuitive user interface.",
+    imgUrl:
+      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue-landing.jpg",
+    videoUrl: "",
+    githubUrl: "https://github.com/leoMirandaa/shadcn-vue-landing-page.git",
+    websiteUrl: "https://shadcn-vue-landing-page.vercel.app/",
+  },
   {
     icon: <ShadcnLandingSVG />,
     title: "Shadcn Landing page",
