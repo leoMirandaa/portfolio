@@ -1,41 +1,33 @@
 {
-  "name": "portfolio",
+  "name": "my-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@nextui-org/avatar": "^2.0.24",
-    "@nextui-org/button": "^2.0.24",
-    "@nextui-org/card": "^2.0.24",
-    "@nextui-org/chip": "^2.0.21",
-    "@nextui-org/input": "^2.1.16",
-    "@nextui-org/navbar": "^2.0.27",
-    "@nextui-org/system": "2.0.7",
-    "@nextui-org/tabs": "^2.0.24",
-    "@nextui-org/theme": "2.1.6",
-    "@nextui-org/tooltip": "^2.0.21",
-    "@vercel/analytics": "^1.1.1",
-    "framer-motion": "^10.16.4",
-    "motion": "^10.16.4",
-    "next": "^14.0.2-canary.25",
-    "react": "^18",
-    "react-dom": "^18",
-    "sonner": "^1.2.3"
+    "@base-ui/react": "^1.5.0",
+    "@vercel/analytics": "1.6.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.16.0",
+    "next": "16.2.6",
+    "react": "^19",
+    "react-dom": "^19",
+    "shadcn": "^4.8.0",
+    "tailwind-merge": "^3.3.1",
+    "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.4",
-    "postcss": "^8",
-    "tailwindcss": "^3",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.2.0",
+    "typescript": "5.7.3"
   }
 }

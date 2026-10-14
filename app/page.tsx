@@ -1,9 +1,10 @@
-import About from "./components/about/page";
+import { LanguageProvider } from "@/lib/i18n"
+import { Portfolio } from "@/components/portfolio/portfolio"
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="p-4 pb-12 max-w-6xl m-auto overflow-hidden 2xl:overflow-visible">
-      <About />
-    </main>
-  );
+    <LanguageProvider>
+      <Portfolio />
+    </LanguageProvider>
+  )
 }
